@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        p~div {
+            background-color: rgb(226, 165, 85);
+        }
+        */
+        /*-----------------<>-----------<>------------*/
+          /*---------------Se selcciona el segundo----------*/
+        /*Especifidad*/
+        /*
+        p.saludo{
+            color:blue;
+            background-color: yellow;
+        }
+
+        .saludo{
+            color:red;
+        }
+
+        #outer a {
+            background-color:red;
+        }
+
+        #outer #inner a {
+            background-color: aquamarine;
+        }
+
+        div div li:nth-child(2) a:hover {
+            border: 10px solid black;
+        }
+        */
+        /*  #id     clase atributo pseudo          Tipo(a)
+            1            2                            2
+            0            4                            4
+            Se elige el primero
+            priemro  segundo                teercero
+            Por esas reglas se basa si es empate pasa a la siguiente
+        */
+
+
+        a {
+            background-color: red!important;
+        }
+            /*USar el uso de !important cuando usemos bootstap y queremos cambiar el color porque ya vienen predefinidos
+            no es recomendable, cambia la depuracionde la hoja de stilo*/
+        #inner a {
+            background-color: orange;
+        }
+        /*Todos los descendientes de inner van a tener background orange*/
+       
+        /*HERENCIA P Hereda cosas de su padre div
+        No se hereda todos los atributos como border
+        ----Se puede controlar la herencia*/
+        #outer {
+            color: green;
+            border: 1px solid red;
+        }
+
+        p{
+            border:inherit;
+        }
+        /*Herredar */
+
+        p{
+            color:initial;
+        }
+        /*Romper herencia en este caso el color*/
+    </style>
+</head>
+<body>
+    <div>
+        <p>parrafo</p>
+        <div>Hola</div>
+        <p>Mundo</p>
+        <div>Cosa</div>
+        <p>
+            <div>texto</div>
+        </p>
+    </div>
+    <!--Especifidad-->
+    <p class="saludo">HOLA Mundo</p>
+    
+
+    <div id="outer">
+        UCB
+        <p>Hola mundo</p>
+        <div id="inner">
+            <a href="#">ss#</a>
+        </div>
+        
+    </div>
+
+    <div>
+        Primera cadena
+        <p>Segunda cadena</p>
+    </div>
+
+</body>
+</html>
